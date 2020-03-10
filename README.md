@@ -25,6 +25,12 @@ git clone https://github.com/maminio/dsctl
 
 ```
 
+If git is not present you can: 
+
+```
+wget https://raw.githubusercontent.com/maminio/dsctl/master/dsctl.sh -O dsctl.sh
+```
+
 **To view all the available commands run:**
 ```
 bash ./dsctl.sh -h
