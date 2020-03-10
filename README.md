@@ -97,6 +97,22 @@ ssh -4 -N -L 2366:fs.dslc.liacs.nl:9995 <YOUR_STDENT_NUMBER>@fs.dslc.liacs.nl
 ```
 5. Open jupyter on your local browser: `localhost:9995`
 
+```
+# checking if a previous Spark session is active
+from pyspark import SparkContext
+from pyspark.sql import SQLContext
+import warnings
+try:
+    # create SparkContext on all CPUs available: in my case I have 4 CPUs on my laptop
+    sc = SparkContext(appName="SDDM", master='spark://fs.dslc.liacs.nl:8085')
+    print("Just created a SparkContext")
+    sqlContext = SQLContext(sc)
+    print("Just created a SQLContext")
+except ValueError:
+    warnings.warn("SparkContext already exists in this scope")
+
+```
+
 ## Port-forward Master Node
 
 1. Open a terminal and ssh-port-forward to `silver`.
