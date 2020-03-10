@@ -87,7 +87,7 @@ python -m pip install jupyter
 ```
 3. Run jupyter notebook
 ```
-python -m jupyter --no-browser --port=9995
+python -m jupyter notebook --no-browser --port=9995
 ```
 4. From your local terminal ssh-port-forward to the cluster
 ```
