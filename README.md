@@ -93,7 +93,7 @@ python -m jupyter notebook --no-browser --port=9995
 ```
 local: 
 ssh -L 9995:localhost:2366 <YOUR_STDENT_NUMBER>@silver.liacs.nl  
-ssh -4 -N -L 2366:fs.dslc.liacs.nl:9995 <YOUR_STDENT_NUMBER>@fs.dslc.liacs.nl
+ssh -4 -N -L 2366:localhost:9995 <YOUR_STDENT_NUMBER>@fs.dslc.liacs.nl
 ```
 5. Open jupyter on your local browser: `localhost:9995`
 
